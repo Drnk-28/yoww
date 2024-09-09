@@ -1,6 +1,4 @@
-<template>
-   <UContainer>
-      <script setup lang="ts">
+<script setup lang="ts">
 const items = [
   [{
     label: 'Profile',
@@ -34,12 +32,11 @@ const items = [
 </script>
 
 <template>
+   <UContainer>  
+      
   <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
     <UButton color="white" label="Options" trailing-icon="i-heroicons-chevron-down-20-solid" />
   </UDropdown>
-</template>
-
-      
       <UCard class="mt-10">
          <template #header>
             <div class="flex justify-between">
