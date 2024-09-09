@@ -22,6 +22,9 @@
    <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
       <UButton :color="random" label="DRNK" icon="i-flowbite-bars-from-left-outline" variant="soft"/>
    </UDropdown>
+     <UDivider>
+    <Logo class="w-28 h-6" />
+  </UDivider>
       <UCard class="mt-10">
          <div>
             <h1>Hi Guys</h1>
