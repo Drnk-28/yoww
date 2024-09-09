@@ -1,52 +1,49 @@
 <script setup lang="ts">
-const items = [
+   const items = [
   [{
-    label: 'Profile',
-    avatar: {
-      src: 'https://avatars.githubusercontent.com/u/739984?v=4'
-    }
+         label: 'Profile',
+         avatar: {
+            src: 'https://avatars.githubusercontent.com/u/739984?v=4'
+         }
   }], [{
-    label: 'Edit',
-    icon: 'i-heroicons-pencil-square-20-solid',
-    shortcuts: ['E'],
-    click: () => {
-      console.log('Edit')
-    }
+         label: 'Edit',
+         icon: 'i-heroicons-pencil-square-20-solid',
+         shortcuts: ['E'],
+         click: () => {
+            console.log('Edit')
+         }
   }, {
-    label: 'Duplicate',
-    icon: 'i-heroicons-document-duplicate-20-solid',
-    shortcuts: ['D'],
-    disabled: true
+         label: 'Duplicate',
+         icon: 'i-heroicons-document-duplicate-20-solid',
+         shortcuts: ['D'],
+         disabled: true
   }], [{
-    label: 'Archive',
-    icon: 'i-heroicons-archive-box-20-solid'
+         label: 'Archive',
+         icon: 'i-heroicons-archive-box-20-solid'
   }, {
-    label: 'Move',
-    icon: 'i-heroicons-arrow-right-circle-20-solid'
+         label: 'Move',
+         icon: 'i-heroicons-arrow-right-circle-20-solid'
   }], [{
-    label: 'Delete',
-    icon: 'i-heroicons-trash-20-solid',
-    shortcuts: ['⌘', 'D']
+         label: 'Delete',
+         icon: 'i-heroicons-trash-20-solid',
+         shortcuts: ['⌘', 'D']
   }]
 ]
+const clrs = ["blue", "violet", "green", "emerald", "lime","red","yellow","indigo","cyan","sky","rose","pink"]
+const random = clrs[Math.floor(Math.random() * clrs.length)]
 </script>
 
 <template>
-   <UContainer>  
-      
-  <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-    <UButton color="white" label="Options" trailing-icon="i-heroicons-chevron-down-20-solid" />
-  </UDropdown>
+   <UContainer>
       <UCard class="mt-10">
+         <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+            <UButton color="random" label="DRNK" trailing-icon="i-flowbite-bars-from-left-outline" />
+         </UDropdown>
          <template #header>
             <div class="flex justify-between">
-               <h1>Welcome to Nuxt UI Starter</h1>
-               <ColorScheme>
-                  <USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']" />
-               </ColorScheme>
+               <h1>Hello world</h1>
             </div>
          </template>
-         <UButton icon="i-heroicons-book-open" to="https://ui.nuxt.com" target="_blank">Open Nuxt UI Documentation</UButton>
       </UCard>
    </UContainer>
 </template>
