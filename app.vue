@@ -37,7 +37,7 @@ const random = clrs[Math.floor(Math.random() * clrs.length)]
    <UContainer>
       <UCard class="mt-10">
          <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-            <UButton color="random" label="DRNK" trailing-icon="i-flowbite-bars-from-left-outline" />
+            <UButton :color="random" label="DRNK" trailing-icon="i-flowbite-bars-from-left-outline" />
          </UDropdown>
          <template #header>
             <div class="flex justify-between">
