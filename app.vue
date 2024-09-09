@@ -29,21 +29,19 @@
          shortcuts: ['⌘', 'D']
   }]
 ]
-const clrs = ["blue", "violet", "green", "emerald", "lime","red","yellow","indigo","cyan","sky","rose","pink"]
-const random = clrs[Math.floor(Math.random() * clrs.length)]
+   const clrs = ["blue", "violet", "green", "emerald", "lime", "red", "yellow", "indigo", "cyan", "sky", "rose", "pink"]
+   const random = clrs[Math.floor(Math.random() * clrs.length)]
 </script>
 
 <template>
    <UContainer>
+      <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+         <UButton :color="random" label="DRNK" icon="i-flowbite-bars-from-left-outline" />
+      </UDropdown>
       <UCard class="mt-10">
-         <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-            <UButton :color="random" label="DRNK" trailing-icon="i-flowbite-bars-from-left-outline" />
-         </UDropdown>
-         <template #header>
-            <div class="flex justify-between">
-               <h1>Hello world</h1>
-            </div>
-         </template>
+         <div>
+            <h1>Hi Guys</h1>
+         </div>
       </UCard>
    </UContainer>
 </template>
