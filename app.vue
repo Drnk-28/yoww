@@ -17,17 +17,19 @@
    const clrs = ["blue", "violet", "green", "emerald", "lime", "red", "yellow", "indigo", "cyan", "sky", "rose", "pink"]
    const random = clrs[Math.floor(Math.random() * clrs.length)]
 </script>
+
 <template>
-   <UContainer>    
-   <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-      <UButton :color="random" label="DRNK" icon="i-flowbite-bars-from-left-outline" variant="soft"/>
-   </UDropdown>
-     <UDivider>
-    <Logo class="w-28 h-6" />
-  </UDivider>
-      <UCard class="mt-10">
+   <UContainer>
+      <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+         <UButton size="xl" :color="random" icon="i-flowbite-bars-from-left-outline" variant="soft" />
+      </UDropdown>
+      <UDivider label="HOME" :ui="{ label: 'text-primary-500 dark:text-primary-400' }">
+
+      </UDivider>
+      <UCard class="mt-10" :color="random">
          <div>
             <h1>Hi Guys</h1>
+            <p>In short, this is my personal site and now or in the future I will probably fill it with content such as photos of my memories, as long as I live in this world.</p>
          </div>
       </UCard>
    </UContainer>
